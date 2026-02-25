@@ -63,7 +63,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: wolontariatonkologiczny.pl
+    - host: aaa.wolontariatonkologiczny.pl
       http:
         paths:
           - path: /
