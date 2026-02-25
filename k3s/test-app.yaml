@@ -31,3 +31,22 @@ spec:
   ports:
     - port: 80
       targetPort: 4173
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: home-app
+  namespace: jakis-orginalny
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: aaa.wolontariatonkologiczny.pl
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: home-app
+                port:
+                  number: 80
